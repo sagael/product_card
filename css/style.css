@@ -32,33 +32,51 @@ main {
   height: 500px;
   background-color: white;
   border-radius: 15px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); }
-  .card h5 {
-    font-family: "Montserrat", sans-serif;
-    color: #6c7289;
-    padding: 15px 0 0 40px;
-    align-self: center; }
-  .card h3 {
-    margin-left: 40px;
-    margin-right: 40px;
-    font-family: "Fraunces", serif;
-    font-size: 35px; }
-  .card p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    color: #6c7289;
-    align-self: center;
-    margin-left: 40px; }
+  display: flex; }
 
 .product-card img {
   width: 300px;
   height: 500px;
   border-radius: 15px 0 0 15px; }
 
-.boton {
-  justify-self: center; }
-  .boton button {
+.contenido {
+  width: 100%;
+  height: 100%;
+  display: grid; }
+  .contenido h5 {
+    font-family: "Montserrat", sans-serif;
+    color: #6c7289;
+    padding: 15px 0 0 40px;
+    align-self: center; }
+  .contenido h3 {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: "Fraunces", serif;
+    font-size: 35px; }
+  .contenido p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #6c7289;
+    align-self: center;
+    margin-left: 40px; }
+  .contenido .precio {
+    display: flex;
+    gap: 1.25rem; }
+    .contenido .precio p {
+      font-family: "Fraunces", serif;
+      font-size: 30px;
+      color: #428C6A;
+      align-self: center; }
+    .contenido .precio span {
+      font-family: "Montserrat", sans-serif;
+      text-decoration: line-through;
+      color: #6c7289;
+      align-self: center;
+      justify-self: flex-start;
+      font-size: 14px; }
+  .contenido .boton {
+    justify-self: center;
+    align-self: center;
     background-color: #1B402E;
     border-radius: 10px;
     border-style: none;
@@ -70,25 +88,8 @@ main {
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease; }
-    .boton button:active {
+    .contenido .boton:active {
       box-shadow: 0 4px 2px -3px #ccc, 0 4px 5px 1px #ccc, 0 2px 7px 1px #ccc; }
-
-.precios {
-  display: flex;
-  flex-direction: row;
-  gap: .625rem; }
-  .precios p {
-    font-family: "Fraunces", serif;
-    font-size: 30px;
-    color: #428C6A;
-    align-self: center; }
-  .precios span {
-    font-family: "Montserrat", sans-serif;
-    text-decoration: line-through;
-    color: #6c7289;
-    align-self: center;
-    justify-self: flex-start;
-    font-size: 14px; }
 
 /*font-family: 'Montserrat', sans-serif;
 font-family: 'Outfit', sans-serif;
@@ -100,6 +101,13 @@ font-family: 'Outfit', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;*/
 @media (max-width: 1024px) {
-  main {
+  .card {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    width: 300px;
+    height: 900px;
+    background-color: white; }
+  .product-card img {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat; } }
