@@ -1,17 +1,20 @@
 @media (max-width:1024px){
+    main{
+        padding: 30px;
+    }
 .card{
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 900px;
+    height: 700px;
     background-color: white;
 }
 .product-card{
     img{
-        width: 100%;
-        height: auto;
-        background-repeat: no-repeat;
-        
+        width: 300px;
+        height: 300px;
+        border-radius: 15px 15px 0 0;
+        content: url("../assets/img/image-product-mobile.jpg");
     }
 }
 }
